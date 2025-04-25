@@ -1,32 +1,25 @@
 import { render } from '@czechitas/render';
-import { Header } from '../components/Header';
-import { Plysaci } from '../components/Plysaci'
+import { Header } from '../components/Header';    // import vsech komponent, co jsme vytvorili - jinak nefunguje ❗❗❗
+import { Plysaci } from '../components/Plysaci';
+import { Footer } from '../components/Footer';
 
 import '../global.css';
 import './index.css';
-import './super.css';
-//import { data } from './seznam.json';
+// import { data } from './seznam.json';
 
 const Odkazy = () => {
   return (
-    <ul>
-      <li><a href="#">Odkaz 1</a></li>
-      <li><a href="#">Odkaz 2</a></li>
-      <li><a href="#">Odkaz 3</a></li>
-      <li><a href="#">Odkaz 4</a></li>
+    <ul className='seznam-odkazu'>
+      <li><a href="#">Odkaz nikam 1</a></li>
+      <li><a href="#">Odkaz nikam 2</a></li>
+      <li><a href="#">Odkaz nikam 3</a></li>
+      <li><a href="#">Odkaz nikam 4</a></li>
     </ul>
   )
 }
 
-const Footer = () => {
-  return (
-    <footer>
-      <p>Czechitas, nová patička upgradovaná</p>
-    </footer>
-  );
-}
 
-/*
+/* Presunuto do "components - Plysaci - index.jsx" ❗ 
 const Plysaci = () => {
 
   const Ctirad = () => {
@@ -70,14 +63,19 @@ const Plysaci = () => {
 
 document.querySelector('#root').innerHTML = render(
   <div className="container">
-    <Header title="Můj titulek stránky" user="Filip Procházka" />
+    {/* Header je komponenta: title a user se posilaji jako atributy do Header-index.jsx a tam se pouziji jako props.title a props.user  */}
+    <Header title="Plyšáci" user="Alena Procházková" />   
 
     <main>
-      <p>Moje naklonovaná stránka.</p>
-      <br />
+      <p>Moje parádní naklonovaná stránka.</p>
+      <p>Seznam zajímavých odkazů:</p>
       <Odkazy />
+      <h2>Vyber si plyšáka</h2>
+      {/* Komponenta Plysaci - v ni jeste dalsi komp. Plysak - stylovani je v komponente! */}
       <Plysaci />
     </main>
+    <br />
+    
     <Footer />
   </div>
 );

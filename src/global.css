@@ -12,4 +12,10 @@ html {
   max-width: 20rem;
   margin-right: auto;
   margin-left: auto;
+  background-color: #f2f2f2;
+
+}
+
+main {
+  padding-inline: 10px;
 }

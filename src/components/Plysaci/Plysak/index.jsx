@@ -4,9 +4,11 @@ export const Plysak = (props) => {
   
     return (
       <div className="plushy">
-        <img src={props.imgLocation} />
-        <strong>{props.plysakName}</strong>
-        <p>{props.plysakDescription}</p>
+        <img className="plushy__image" src={props.imgLocation} />
+        <h2 className="plushy__name">{props.plysakName}</h2>
+        <p className="plushy__text">{props.plysakDescription}</p>
       </div>
     )
 }
+
+
