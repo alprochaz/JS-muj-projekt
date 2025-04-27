@@ -7,6 +7,7 @@ import '../global.css';
 import './index.css';
 // import { data } from './seznam.json';
 
+// Komponenta Odkazy (sla by taky oddelit do samostatne slozky)
 const Odkazy = () => {
   return (
     <ul className='seznam-odkazu'>
@@ -18,8 +19,7 @@ const Odkazy = () => {
   )
 }
 
-
-/* Presunuto do "components - Plysaci - index.jsx" ❗ 
+/* ..Presunuto do "components - Plysaci - index.jsx" ❗ 
 const Plysaci = () => {
 
   const Ctirad = () => {
@@ -60,7 +60,7 @@ const Plysaci = () => {
 
 */
 
-
+// Zde je obsah stranky - vyrendruje se do divu v index.html s id="root"
 document.querySelector('#root').innerHTML = render(
   <div className="container">
     {/* Header je komponenta: title a user se posilaji jako atributy do Header-index.jsx a tam se pouziji jako props.title a props.user  */}
@@ -68,9 +68,9 @@ document.querySelector('#root').innerHTML = render(
 
     <main>
       <p>Moje parádní naklonovaná stránka.</p>
-      <p>Seznam zajímavých odkazů:</p>
+      <p>Seznam moc zajímavých odkazů:</p>
       <Odkazy />
-      <h2>Vyber si plyšáka</h2>
+      <h2>Vyber si plyšáka</h2> 
       {/* Komponenta Plysaci - v ni jeste dalsi komp. Plysak - stylovani je v komponente! */}
       <Plysaci />
     </main>

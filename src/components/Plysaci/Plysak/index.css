@@ -10,7 +10,6 @@
 
 .plushy__image {
     width: 100%;
-
 }
 
 .plushy__name {
@@ -22,3 +21,8 @@
     
 }
 
+@media only screen and (min-width: 800px) {
+    .plushy {
+        max-width: 30%;
+    }
+  }
